@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const response = document.getElementById("response");
@@ -68,6 +67,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-</script>
 
 
