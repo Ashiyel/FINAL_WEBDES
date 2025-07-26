@@ -1,23 +1,40 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbzblvI_7UM6b4wl9XAeMinvgPIyuDqIIWlBeK8x2hv_6M43BDm7OeghfB_twcOyE-jJTw/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzTCsvF2eFvgxMU4sBydHD1kfCnupMbKmiFrzNhUScR_R-GHpO_5q_Rpl33AabBKPpkOg/exec";
 const form = document.getElementById("contact-form");
 const responseMsg = document.getElementById("response");
+const popup = document.getElementById("confirmationPopup");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const formData = new FormData(form);
+  const formData = {
+    name: form.elements["name"].value,
+    email: form.elements["email"].value,
+    message: form.elements["message"].value,
+  };
 
   fetch(scriptURL, {
     method: "POST",
-    body: formData
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
   })
   .then(response => response.text())
   .then(result => {
-    responseMsg.textContent = "Message sent successfully!";
-    form.reset();
+    responseMsg.textContent = "";
+    popup.style.display = "block";
   })
   .catch(error => {
     responseMsg.textContent = "Error sending message.";
     console.error("Error!", error.message);
   });
 });
+
+function submitAnother() {
+  popup.style.display = "none";
+  form.reset();
+}
+
+function goHome() {
+  window.location.href = "/index.html";
+}
