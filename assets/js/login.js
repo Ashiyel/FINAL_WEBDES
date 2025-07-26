@@ -6,18 +6,11 @@ const popup = document.getElementById("confirmationPopup");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const formData = {
-    name: form.elements["name"].value,
-    email: form.elements["email"].value,
-    message: form.elements["message"].value,
-  };
+  const formData = new FormData(form);
 
   fetch(scriptURL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
+    body: formData
   })
   .then(response => response.text())
   .then(result => {
@@ -30,11 +23,13 @@ form.addEventListener("submit", (e) => {
   });
 });
 
+// ✅ User wants to submit another response
 function submitAnother() {
   popup.style.display = "none";
   form.reset();
 }
 
+// ✅ User wants to go home
 function goHome() {
   window.location.href = "/index.html";
 }
