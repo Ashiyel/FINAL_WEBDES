@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
-  const response = document.getElementById("response");
+  const response = document.getElementById("Sheet1");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message: form.elements["message"].value
     };
 
-    fetch("https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycby1kILasUXJHwRZAHOT5BJ09k6dPBEEc98PDW8nrcDbVg6FfKy27wmoD7Pu_BG1-01B/exec", {
+    fetch("https://script.google.com/macros/s/AKfycby3h9JqEWc-j05iiX15VaIUSSqjjoPY8sr0O4TT79LJR3FBAWNDVaBYuh5fJX8C42ndIg/exec", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
