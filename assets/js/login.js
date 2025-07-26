@@ -23,13 +23,11 @@ form.addEventListener("submit", (e) => {
   });
 });
 
-// ✅ User wants to submit another response
 function submitAnother() {
   popup.style.display = "none";
   form.reset();
 }
 
-// ✅ User wants to go home
 function goHome() {
   window.location.href = "/index.html";
 }
