@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message: form.elements["message"].value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycby3h9JqEWc-j05iiX15VaIUSSqjjoPY8sr0O4TT79LJR3FBAWNDVaBYuh5fJX8C42ndIg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzblvI_7UM6b4wl9XAeMinvgPIyuDqIIWlBeK8x2hv_6M43BDm7OeghfB_twcOyE-jJTw/exec", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
