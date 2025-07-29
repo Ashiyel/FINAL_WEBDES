@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SDG 6 Page</title>
   <style>
+
+  header h1 {
+  color: white; /* Set font color to white */
+}
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -16,6 +20,28 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
+      position: relative;
+    }
+
+    .tab {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+
+    .tabContent {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .tabContent:hover {
+      background-color: #005f8a;
     }
 
     header {
@@ -24,6 +50,7 @@
       padding: 20px;
       text-align: center;
       border-radius: 8px;
+      margin-top: 60px;
     }
 
     .content-wrapper {
@@ -89,29 +116,14 @@
       color: #fff;
       border-radius: 10px;
     }
-
-    .back-button {
-      text-align: center;
-      margin: 20px 0 0;
-    }
-
-    .back-button button {
-      padding: 10px 20px;
-      background-color: #0077b6;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .back-button button:hover {
-      background-color: #005f8a;
-    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="tab">
+      <a class="tabContent" href="/pages/ABOUT/about.html" rel="noopener noreferrer">← Back</a>
+    </div>
+
     <header>
       <h1>Clean Water and Sanitation</h1>
     </header>
@@ -162,10 +174,6 @@
     <footer>
       &copy; United Nations - Department of Economic and Social Affairs
     </footer>
-
-    <div class="back-button">
-      <button onclick="history.back()">← Back</button>
-    </div>
   </div>
 </body>
 </html>
