@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab Activity 4</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Back button -->
+  <div class="tab">
+    <a class="tabContent" href="/pages/ABOUT/about.html" rel="noopener noreferrer">← Back</a>
+  </div>
+
+  <!-- Title section with logo and heading -->
+  <div class="form-title-container">
+    <img src="assets/img/sdgLogo.png" alt="SDG Logo" class="logo" />
+    <h1 class="header">Sustainable Development Goals</h1>
+  </div>
+
+  <!-- Form container -->
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form id="loginForm" onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" name="name" id="name" placeholder="ex. Juan Dela Cruz" required />
+
+        <label>Email Address:</label>
+        <input type="email" name="email" id="email" placeholder="ex. juandelacruz@yahoo.com" required />
+
+        <label>Address:</label>
+        <input type="text" name="address" placeholder="993 Sampaloc Manila Ph." />
+
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="ex. 20" />
+
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+        <input type="radio" name="gender" value="Other" /> Other
+        <input type="text" name="othergender" placeholder="Other (specify)" />
+
+        <h3>Sustainable Development Goals</h3>
+
+        <!-- SDG Checkboxes -->
+        <div id="sdg-checkboxes">
+          <label data-img="1"><input type="checkbox" name="sdg" value="1" />1) No Poverty</label>
+          <label data-img="2"><input type="checkbox" name="sdg" value="2" />2) Zero Hunger</label>
+          <label data-img="3"><input type="checkbox" name="sdg" value="3" />3) Good Health and Well-being</label>
+          <label data-img="4"><input type="checkbox" name="sdg" value="4" />4) Quality Education</label>
+          <label data-img="5"><input type="checkbox" name="sdg" value="5" />5) Gender Equality</label>
+          <label data-img="6"><input type="checkbox" name="sdg" value="6" />6) Clean Water and Sanitation</label>
+          <label data-img="7"><input type="checkbox" name="sdg" value="7" />7) Affordable and Clean Energy</label>
+          <label data-img="8"><input type="checkbox" name="sdg" value="8" />8) Decent Work and Economic Growth</label>
+          <label data-img="9"><input type="checkbox" name="sdg" value="9" />9) Industry, Innovation and Infrastructure</label>
+          <label data-img="10"><input type="checkbox" name="sdg" value="10" />10) Reduced Inequalities</label>
+          <label data-img="11"><input type="checkbox" name="sdg" value="11" />11) Sustainable Cities and Communities</label>
+          <label data-img="12"><input type="checkbox" name="sdg" value="12" />12) Responsible Consumption and Production</label>
+          <label data-img="13"><input type="checkbox" name="sdg" value="13" />13) Climate Action</label>
+          <label data-img="14"><input type="checkbox" name="sdg" value="14" />14) Life Below Water</label>
+          <label data-img="15"><input type="checkbox" name="sdg" value="15" />15) Life on Land</label>
+          <label data-img="16"><input type="checkbox" name="sdg" value="16" />16) Peace, Justice, and Strong Institutions</label>
+          <label data-img="17"><input type="checkbox" name="sdg" value="17" />17) Partnerships for the Goals</label>
+        </div>
+
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const labels = document.querySelectorAll('#sdg-checkboxes label');
+
+    labels.forEach(label => {
+      label.addEventListener('mouseover', () => {
+        const imgNumber = label.getAttribute('data-img');
+        document.body.style.backgroundImage = `url('assets/img/${imgNumber}.jpg')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundPosition = 'center';
+      });
+
+      label.addEventListener('mouseout', () => {
+        document.body.style.backgroundImage = 'none';
+      });
+    });
+
+    function validateForm() {
+      return true;
+    }
+  </script>
+</body>
+</html>
