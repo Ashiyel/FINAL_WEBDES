@@ -67,16 +67,28 @@
       </section>
     </section>
 
-    <div class="contactFormBox">
-      <h3 class="formTitle">Submit the form to let us contact you!</h3>
-      <form id="contact-form" class="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Email (ex. juandelacruz@gmail.com)" required />
-        <textarea name="message" placeholder="Your message or feedback..." rows="4" required></textarea>
-        <button type="submit">Submit</button>
-        <p class="success" id="response"></p>
-      </form>
+<div class="contactFormBox">
+  <h3 class="formTitle">Submit the form to let us contact you!</h3>
+  <form id="contact-form" class="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email (ex. juandelacruz@gmail.com)" required />
+    <textarea name="message" placeholder="Your message or feedback..." rows="4" required></textarea>
+    <button type="submit">Submit</button>
+    <p class="success" id="response"></p>
+  </form>
+</div>
+
+<!-- Confirmation Popup -->
+<div id="confirmationPopup" class="popup-overlay">
+  <div class="popup-box">
+    <p>Form submitted successfully!</p>
+    <div class="popup-buttons">
+      <button onclick="submitAnother()">Yes</button>
+      <button onclick="goHome()">Go home</button>
     </div>
+  </div>
+</div>
+
 
     <!-- FOOTER -->
     <footer>

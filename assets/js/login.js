@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycby3h9JqEWc-j05iiX15VaIUSSqjjoPY8sr0O4TT79LJR3FBAWNDVaBYuh5fJX8C42ndIg/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyq2TcIh-bV9QDSRzcE0wXXcRdlfyphDAYnogUKBbUwjAft5AmN8KxmYu1njbzDszAE/exec";
 const form = document.getElementById("contact-form");
 const responseMsg = document.getElementById("response");
 const popup = document.getElementById("confirmationPopup");
@@ -12,14 +12,19 @@ form.addEventListener("submit", (e) => {
     method: "POST",
     body: formData
   })
-  .then(response => response.text())
+  .then(response => response.json())
   .then(result => {
-    responseMsg.textContent = "";
-    popup.style.display = "block";
+    if (result.result === "success") {
+      responseMsg.textContent = "";
+      popup.style.display = "flex";
+    } else {
+      responseMsg.textContent = "Failed to submit. Try again.";
+      console.error("Script error:", result);
+    }
   })
   .catch(error => {
     responseMsg.textContent = "Error sending message.";
-    console.error("Error!", error.message);
+    console.error("Network error!", error.message);
   });
 });
 

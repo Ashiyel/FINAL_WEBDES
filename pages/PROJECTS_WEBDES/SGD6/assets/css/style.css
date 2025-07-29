@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cleanWater {
+    font:bolder;
+    font-size: 500%;
+    color: white; 
+  text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+body {
+  background-image: url("https://data.unicef.org/wp-content/uploads/2023/07/UNI398386.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container_12 {
+    width: 960px;
+    margin: 40px auto;
+}
+
+.grid_9 .main-content{
+    line-height: 100px;
+    text-height: 100px;
+}
+
+.grid_12 {
+
+}
+
+.grid_3, .grid_9 {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grid_3 {
+    width: 220px;
+    
+}
+
+.grid_9 {
+    width: 700px;
+    font-size:x-large;  
+}
+
+.grid_12 {
+    width: 940px;
+
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.header {
+    background-color:rgba(255, 237, 237, 0);
+    padding: 20px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+  }
+
+.sidebar, .h4 {
+    color: aliceblue;
+    text-decoration: solid;
+
+
+}
+
+.sidebar {
+    margin-right: 8px;
+
+}
+
+.sidebar_hi {
+    background-color: rgb(241, 248, 255);
+    margin-top: 3%;
+    padding: 5%;
+    box-sizing:content-box;
+    border-color: #005fa3;
+    text-decoration: dotted;
+    font-style: oblique;
+    font-style: none ;
+    
+}
+
+.footer_1 {
+    margin: 3%;
+
+}
+
+.main-content {
+    background-color: #ffffff8e;
+    padding: 20px;
+    border: 1px solid #dddddd00;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    box-sizing: border-box;
+    border-radius: 5%;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    clear: both;
+}
+
+
+
+.footer_1 {
+
+    font:bolder;
+    font-size: 100%;
+    color: white; 
+  text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.sdg-button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.sdg-button:hover {
+  background-color: #005fa3;
+}
