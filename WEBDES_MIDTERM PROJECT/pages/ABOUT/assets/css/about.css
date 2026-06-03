@@ -1,0 +1,128 @@
+/* ========== ABOUT ME SECTION // PAGE 2 ========== */
+.AboutMeTitleHead {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 100px;
+  font-family: TheBringa;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.878);
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media only screen and (max-width: 768px) {
+  .logo {
+    font-size: large;
+    letter-spacing: 5px;
+    margin-left: 2%;
+    margin-right: 10%;
+  }
+
+  nav {
+    width: 80%;
+  }
+
+  header button {
+    font-size: small;
+    margin-left: 5px;
+   
+  }
+
+  .introSubhead {
+    font-size: 5vw;
+    line-height: 150%;
+    margin-left: 5%;
+    margin-top: 100px;
+  }
+
+  .introMain {
+    font-size: 80;
+    line-height: 150%;
+    margin-left: 2%;
+    margin-bottom: 200px;
+  }
+
+  .image {
+    margin-right: 50px;
+  }
+
+  .footerGen {
+    font-size: medium;
+  }
+
+  .AboutMeTitleHead {
+    font-size: 100px;
+    height: 150px;
+  }
+}
+
+/* ===== LABEL DESIGN =====*/
+
+.label {
+  background-color: #ffcd04;
+}
+
+
+.tab a.tabContent {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;       
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 12px 0;
+  line-height: 1.8;
+}
+
+.tab a.tabContent:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+/* == EDUCATION TAB == */
+
+.educationTab p {
+
+  font-size:xx-large;
+  margin-bottom: 0px;
+  line-height: 1.7;
+}
+
+.educationTab h3 {
+  color:#f2ff0086;
+}
+
+.educationTab a {
+  color: white;
+  text-decoration: none; 
+}
+
+.educationTab a:hover {
+  text-decoration: underline; 
+  color: #ffcc00; 
+}
+
+/* FACTS TAB*/
+
+.factsTab ul {
+  line-height: 3;
+  font-size:xx-large;
+  margin-top: 20px;
+}
+
+.factsTab li{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/* ========== CUSTOM FONTS ========== */
+@font-face {
+  font-family: TheBringa;
+  src: url(https://www.dafont.com/the-bringa.font);
+}
+
+@font-face {
+  font-family: flagoriaCalintha;
+  src: url(https://www.dafont.com/flagoriacalintha.font);
+}

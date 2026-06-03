@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Periodic Table</title>
+  <style>
+
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fde7ef;
+  background-image: url('/assets/img/CHEMISTRY.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+   body {
+  font-family: Arial, sans-serif;
+  background-color: #fde7ef;
+  background-image: url('/assets/img/CHEMISTRY.jpeg'); /* Replace with your image path or URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .table-container {
+      display: grid;
+      grid-template-columns: repeat(18, 1fr);
+      gap: 1px;
+      margin: 0 auto;
+      max-width: 90vw;
+      background-color: #00000020;
+    }
+
+    .element {
+      border: 1px solid #444;
+      text-align: center;
+      padding: 10px 5px;
+      background-color: white;
+      min-height: 50px;
+      min-width: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .element.empty {
+      background-color: transparent;
+      border: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #444;
+    }
+
+    /* Back button styled as tab */
+    .tab {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .tabContent {
+      text-decoration: none;
+      background-color: #c94c4c;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .tabContent:hover {
+      background-color: #a83838;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- BACK BUTTON-->
+  <div class="tab">
+   <a class="tabContent" href="/pages/ABOUT/about.html">← Back</a>
+
+  </div>
+
+  <h1>Periodic Table of Elements</h1>
+
+  <div class="table-container">
+    <!-- Row 1 -->
+    <div class="element">1<br />H</div>
+    <div class="element empty" style="grid-column: span 16"></div>
+    <div class="element">2<br />He</div>
+
+    <!-- Row 2 -->
+    <div class="element">3<br />Li</div>
+    <div class="element">4<br />Be</div>
+    <div class="element empty" style="grid-column: span 10"></div>
+    <div class="element">5<br />B</div>
+    <div class="element">6<br />C</div>
+    <div class="element">7<br />N</div>
+    <div class="element">8<br />O</div>
+    <div class="element">9<br />F</div>
+    <div class="element">10<br />Ne</div>
+
+    <!-- Row 3 -->
+    <div class="element">11<br />Na</div>
+    <div class="element">12<br />Mg</div>
+    <div class="element empty" style="grid-column: span 10"></div>
+    <div class="element">13<br />Al</div>
+    <div class="element">14<br />Si</div>
+    <div class="element">15<br />P</div>
+    <div class="element">16<br />S</div>
+    <div class="element">17<br />Cl</div>
+    <div class="element">18<br />Ar</div>
+
+    <!-- Row 4 -->
+    <div class="element">19<br />K</div>
+    <div class="element">20<br />Ca</div>
+    <div class="element">21<br />Sc</div>
+    <div class="element">22<br />Ti</div>
+    <div class="element">23<br />V</div>
+    <div class="element">24<br />Cr</div>
+    <div class="element">25<br />Mn</div>
+    <div class="element">26<br />Fe</div>
+    <div class="element">27<br />Co</div>
+    <div class="element">28<br />Ni</div>
+    <div class="element">29<br />Cu</div>
+    <div class="element">30<br />Zn</div>
+    <div class="element">31<br />Ga</div>
+    <div class="element">32<br />Ge</div>
+    <div class="element">33<br />As</div>
+    <div class="element">34<br />Se</div>
+    <div class="element">35<br />Br</div>
+    <div class="element">36<br />Kr</div>
+
+    <!-- Row 5 -->
+    <div class="element">37<br />Rb</div>
+    <div class="element">38<br />Sr</div>
+    <div class="element">39<br />Y</div>
+    <div class="element">40<br />Zr</div>
+    <div class="element">41<br />Nb</div>
+    <div class="element">42<br />Mo</div>
+    <div class="element">43<br />Tc</div>
+    <div class="element">44<br />Ru</div>
+    <div class="element">45<br />Rh</div>
+    <div class="element">46<br />Pd</div>
+    <div class="element">47<br />Ag</div>
+    <div class="element">48<br />Cd</div>
+    <div class="element">49<br />In</div>
+    <div class="element">50<br />Sn</div>
+    <div class="element">51<br />Sb</div>
+    <div class="element">52<br />Te</div>
+    <div class="element">53<br />I</div>
+    <div class="element">54<br />Xe</div>
+
+    <!-- Row 6 -->
+    <div class="element">55<br />Cs</div>
+    <div class="element">56<br />Ba</div>
+    <div class="element">57–71<br />Ln</div>
+    <div class="element">72<br />Hf</div>
+    <div class="element">73<br />Ta</div>
+    <div class="element">74<br />W</div>
+    <div class="element">75<br />Re</div>
+    <div class="element">76<br />Os</div>
+    <div class="element">77<br />Ir</div>
+    <div class="element">78<br />Pt</div>
+    <div class="element">79<br />Au</div>
+    <div class="element">80<br />Hg</div>
+    <div class="element">81<br />Tl</div>
+    <div class="element">82<br />Pb</div>
+    <div class="element">83<br />Bi</div>
+    <div class="element">84<br />Po</div>
+    <div class="element">85<br />At</div>
+    <div class="element">86<br />Rn</div>
+
+    <!-- Row 7 -->
+    <div class="element">87<br />Fr</div>
+    <div class="element">88<br />Ra</div>
+    <div class="element">89–103<br />An</div>
+    <div class="element">104<br />Rf</div>
+    <div class="element">105<br />Db</div>
+    <div class="element">106<br />Sg</div>
+    <div class="element">107<br />Bh</div>
+    <div class="element">108<br />Hs</div>
+    <div class="element">109<br />Mt</div>
+    <div class="element">110<br />Ds</div>
+    <div class="element">111<br />Rg</div>
+    <div class="element">112<br />Cn</div>
+    <div class="element">113<br />Nh</div>
+    <div class="element">114<br />Fl</div>
+    <div class="element">115<br />Mc</div>
+    <div class="element">116<br />Lv</div>
+    <div class="element">117<br />Ts</div>
+    <div class="element">118<br />Og</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; United Nations - Department of Economic and Social Affairs
+  </div>
+</body>
+
+</html>
